@@ -10,7 +10,7 @@ import "@/app/tokens.css";
 import "@/app/tailwind.css";
 
 export const metadata: Metadata = {
-  title: "CMS Registry Starter",
+  title: "Contentful Registry Starter",
   description: "Starter to help build a Shadcn Registry using Tailwind v4",
   icons: [{ rel: "icon", url: "/favicon.svg", type: "image/svg+xml" }],
 };
