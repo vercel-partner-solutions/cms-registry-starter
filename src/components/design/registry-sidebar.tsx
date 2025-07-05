@@ -68,6 +68,7 @@ export const componentItems = [
 ];
 
 export const blockItems = [
+  { name: "Blog Hero", path: "/blocks/blog-hero" },
   { name: "Hero", path: "/blocks/hero" },
   { name: "Login", path: "/blocks/login" },
   { name: "Promo", path: "/blocks/promo" },
@@ -105,13 +106,13 @@ export function RegistrySidebar() {
     if (searchTerm) {
       setFilteredComponents(
         componentItems.filter((item) =>
-          item.name.toLowerCase().includes(searchTerm.toLowerCase()),
-        ),
+          item.name.toLowerCase().includes(searchTerm.toLowerCase())
+        )
       );
       setFilteredBlocks(
         blockItems.filter((item) =>
-          item.name.toLowerCase().includes(searchTerm.toLowerCase()),
-        ),
+          item.name.toLowerCase().includes(searchTerm.toLowerCase())
+        )
       );
     } else {
       setFilteredComponents(componentItems);

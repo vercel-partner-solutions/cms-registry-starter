@@ -10,7 +10,7 @@ import "@/app/tokens.css";
 import "@/app/tailwind.css";
 
 export const metadata: Metadata = {
-  title: "Registry Starter",
+  title: "CMS Registry Starter",
   description: "Starter to help build a Shadcn Registry using Tailwind v4",
   icons: [{ rel: "icon", url: "/favicon.svg", type: "image/svg+xml" }],
 };
@@ -42,7 +42,7 @@ export default function RootLayout({
         GeistSans.variable,
         GeistMono.variable,
         MontserratSerif.variable,
-        "bg-background text-foreground",
+        "bg-background text-foreground"
       )}
     >
       <meta

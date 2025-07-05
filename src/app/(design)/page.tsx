@@ -19,6 +19,7 @@ const componentItems = [
 ];
 
 const blockItems = [
+  { name: "Blog Hero", path: "/blocks/blog-hero" },
   { name: "Hero", path: "/blocks/hero" },
   { name: "Login", path: "/blocks/login" },
   { name: "Promo", path: "/blocks/promo" },
@@ -31,7 +32,7 @@ export default function Home() {
       <div className="mb-8">
         <div className="space-y-2">
           <h1 className="font-bold text-3xl tracking-tight md:text-4xl">
-            Registry
+            CMS Registry
           </h1>
           <p className="text-muted-foreground">
             Distribute your design system tokens, custom components, hooks,

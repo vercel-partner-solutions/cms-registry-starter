@@ -1,5 +1,5 @@
-<a href="https://registry-starter.vercel.app/">
-  <h1 align="center">Registry Starter</h1>
+<a href="https://cms-registry-starter.vercel.app/">
+  <h1 align="center">CMS Registry Starter</h1>
 </a>
 
 <p align="center">
@@ -16,15 +16,32 @@
 </p>
 <br/>
 
+## Project Overview
+
+The CMS Registry Starter is designed to facilitate the integration of a Content Management System (CMS) into your components and the v0 platform. This starter kit provides a structured approach to streamline the integration process, ensuring that your CMS is seamlessly incorporated into your design system.
+
+### Key Integration Steps
+
+1. **Update the `.well-known/r/cms` Route Handler**:
+
+   - Modify the route handler to fetch schema information directly from the CMS. This ensures that your application can dynamically adapt to changes in the CMS schema.
+
+2. **Configure Base Queries in `src/lib/cms/index.ts`**:
+
+   - Implement base queries to retrieve content from the CMS. This setup is crucial for ensuring that your application can efficiently access and display CMS-managed content.
+
+3. **Customize `prompt.md` for CMS Specifics**:
+   - Tailor the `prompt.md` file to include any CMS-specific instructions or configurations. This document serves as a guide for developers interacting with the CMS through the application.
+
 ## Deploy Your Own
 
 You can deploy your own version of the Next.js Registry Starter to Vercel with one click:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fregistry-starter&project-name=my-registry&repository-name=my-registry&demo-title=Registry%20Starter&demo-description=Registry%20Starter%20is%20a%20free%2C%20open-source%20template%20built%20with%20Next.js%20and%20Shadcn%2Fui%20Registry%20to%20accelerate%20your%20AI-Native%20Design%20System.&demo-url=https%3A%2F%2Fregistry-starter.vercel.app&demo-image=%2F%2Fregistry-starter.vercel.app%2Fpreview.png)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fcms-registry-starter&project-name=my-registry&repository-name=my-registry&demo-title=Registry%20Starter&demo-description=Registry%20Starter%20is%20a%20free%2C%20open-source%20template%20built%20with%20Next.js%20and%20Shadcn%2Fui%20Registry%20to%20accelerate%20your%20AI-Native%20Design%20System.&demo-url=https%3A%2F%2Fcms-registry-starter.vercel.app&demo-image=%2F%2Fcms-registry-starter.vercel.app%2Fpreview.png)
 
 ## Open in v0
 
-[![Open in v0](https://registry-starter.vercel.app/open-in-v0.svg)](https://v0.dev/chat/api/open?title=Dashboard+Kit&prompt=These+are+existing+design+system+styles+and+files.+Please+utilize+them+alongside+base+components+to+build.&url=https%3A%2F%2Fregistry-starter.vercel.app%2Fr%2Fdashboard.json)
+[![Open in v0](https://cms-registry-starter.vercel.app/open-in-v0.svg)](https://v0.dev/chat/api/open?title=Dashboard+Kit&prompt=These+are+existing+design+system+styles+and+files.+Please+utilize+them+alongside+base+components+to+build.&url=https%3A%2F%2Fcms-registry-starter.vercel.app%2Fr%2Fdashboard.json)
 
 This registry application also exposes `Open in v0` buttons for each component. Once this application is deployed, the
 `Open in v0` button redirects to [`v0.dev`](https://v0.dev) with a prepopulated prompt and a URL pointing back to this
@@ -78,19 +95,21 @@ like:
 
 ```css
 @font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    src: url('https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm45xW5rygbi49c.woff2') format('woff2'),
-    url('https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm45xW5rygbj49c.woff') format('woff');
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm45xW5rygbi49c.woff2")
+      format("woff2"), url("https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm45xW5rygbj49c.woff")
+      format("woff");
 }
 
 @font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    src: url('https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3gnD-w.woff2') format('woff2'),
-    url('https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3g3D_w.woff') format('woff');
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3gnD-w.woff2")
+      format("woff2"), url("https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3g3D_w.woff")
+      format("woff");
 }
 ```
 
@@ -122,3 +141,7 @@ Your app should now be running on [localhost:3000](http://localhost:3000).
 `@/hooks` contains all React hooks
 
 `@/lib` contains all business logic & utils
+
+`src/lib/cms`: Specifically dedicated to CMS integration, including base queries and schema handling.
+
+`.well-known`: Contains route handlers for fetching schema information from the CMS, ensuring dynamic adaptability to schema changes.
