@@ -6,4 +6,4 @@ DO NOT change 'lib/cms/schema.json' and refer to it for the CMS schema
 
 DO NOT change existing function signatures in 'lib/cms/index.ts'. This file should contain all CMS specific code
 
-Use [CMS API] for querying
+Use the Contentful GraphQL API for querying
