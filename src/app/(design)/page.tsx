@@ -19,6 +19,7 @@ const componentItems = [
 ];
 
 const blockItems = [
+  { name: "Blog Hero", path: "/blocks/blog-hero" },
   { name: "Hero", path: "/blocks/hero" },
   { name: "Login", path: "/blocks/login" },
   { name: "Promo", path: "/blocks/promo" },

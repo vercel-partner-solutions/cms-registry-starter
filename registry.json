@@ -8,13 +8,13 @@
       "type": "registry:style",
       "cssVars": {
         "light": {
-          "primary": "oklch(0.52 0.13 144.17)",
+          "primary": "oklch(0.45 0.15 250)",
           "primary-foreground": "oklch(1.0 0 0)",
           "radius": "0.5rem"
         },
         "dark": {
-          "primary": "oklch(0.52 0.13 144.17)",
-          "primary-foreground": "oklch(1.0 0 0)"
+          "primary": "oklch(0.55 0.18 250)",
+          "primary-foreground": "oklch(0.12 0.01 220)"
         }
       },
       "files": []
@@ -249,6 +249,36 @@
           "path": "src/app/starters/(minimal)/blank/page.tsx",
           "type": "registry:page",
           "target": "app/page.tsx"
+        }
+      ]
+    },
+    {
+      "name": "blog-hero",
+      "type": "registry:component",
+      "title": "Blog Hero",
+      "description": "Hero section specifically designed for blog posts.",
+      "registryDependencies": [
+        "https://cms-registry-starter.vercel.app/r/theme.json",
+        "https://cms-registry-starter.vercel.app/.well-known/r/cms"
+      ],
+      "files": [
+        {
+          "path": "src/components/blog-hero.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/app/starters/(minimal)/v0-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        },
+        {
+          "path": "src/app/starters/(minimal)/blank/page.tsx",
+          "type": "registry:page",
+          "target": "app/page.tsx"
+        },
+        {
+          "path": "src/lib/cms/index.ts",
+          "type": "registry:lib"
         }
       ]
     },

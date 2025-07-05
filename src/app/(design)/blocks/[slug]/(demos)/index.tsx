@@ -4,6 +4,7 @@ import { hero } from "@/app/(design)/blocks/[slug]/(demos)/hero";
 import { login } from "@/app/(design)/blocks/[slug]/(demos)/login";
 import { productGrid } from "@/app/(design)/blocks/[slug]/(demos)/product-grid";
 import { promo } from "@/app/(design)/blocks/[slug]/(demos)/promo";
+import { blogHero } from "@/app/(design)/blocks/[slug]/(demos)/blog-hero";
 
 interface Block {
   name: string; // this must match the `registry.json` name
@@ -13,6 +14,7 @@ interface Block {
 }
 
 export const demos: { [name: string]: Block } = {
+  "blog-hero": blogHero,
   hero,
   login,
   promo,
