@@ -20,6 +20,12 @@
 
 The CMS Registry Starter is designed to facilitate the integration of a Content Management System (CMS) into your components and the v0 platform. This starter kit provides a structured approach to streamline the integration process, ensuring that your CMS is seamlessly incorporated into your design system.
 
+## Explore CMS Integrations
+
+Discover how this starter kit integrates with various CMS platforms by exploring the following branches:
+
+- [Contentful](https://github.com/vercel-partner-solutions/cms-registry-starter/tree/contentful) ([Demo](https://contentful-registry-starter.vercel.app/))
+
 ### Key Integration Steps
 
 1. **Update the `.well-known/r/cms` Route Handler**:
