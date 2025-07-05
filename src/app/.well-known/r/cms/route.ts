@@ -26,14 +26,14 @@ export async function GET(request: NextRequest) {
       type: "registry:file",
       files: [
         {
-          path: ".well-known/r/cms.json",
+          path: ".well-known/r/cms",
           content: JSON.stringify(
             { ...timestampData, contentTypes: contentTypes },
             null,
             2
           ),
           type: "registry:file",
-          target: "src/cms/schema.json",
+          target: "lib/cms/schema.json",
         },
       ],
     };

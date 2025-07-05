@@ -4,20 +4,20 @@ import Link from "next/link";
 export function BlogHero({
   title,
   description,
-  featuredImage,
+  image,
   articleUrl,
 }: {
   title: string;
   description: string;
-  featuredImage?: string;
+  image?: string;
   articleUrl: string;
 }) {
-  if (featuredImage) {
+  if (image) {
     return (
       <section className="relative w-full h-[560px] text-white">
         <Link href={articleUrl}>
           <Image
-            src={featuredImage || "/placeholder.svg"}
+            src={image || "/placeholder.svg"}
             alt={title}
             fill
             className="object-cover"

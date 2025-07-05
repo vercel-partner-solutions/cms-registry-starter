@@ -11,6 +11,12 @@ interface Block {
   components?: {
     [name: string]: ReactNode | ReactElement;
   };
+  // returns component based on search params
+  getComponents?: (searchParams: {
+    [key: string]: string | string[] | undefined;
+  }) => {
+    [name: string]: ReactNode | ReactElement;
+  };
 }
 
 export const demos: { [name: string]: Block } = {

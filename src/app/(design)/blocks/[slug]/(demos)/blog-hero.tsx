@@ -1,12 +1,28 @@
 import { BlogHero } from "@/components/blog-hero";
+import { getBlogArticle } from "@/lib/cms";
 
-async function BlogHeroDemo() {
+async function ConnectedBlogHeroDemo() {
+  const blog = await getBlogArticle("getting-started-nextjs-15");
+
+  if (!blog) return null;
+
   return (
     <BlogHero
-      title="Getting Started with Next.js 15"
-      description="Learn about the latest features and improvements in Next.js 15, including the new App Router enhancements and performance optimizations."
-      articleUrl="#"
-      featuredImage="/blog-hero.png"
+      title={blog.title}
+      description={blog.details}
+      articleUrl={`/article/${blog.slug}`}
+      image={blog.image?.url}
+    />
+  );
+}
+
+async function StaticBlogHeroDemo() {
+  return (
+    <BlogHero
+      title="Article Title"
+      description="Placeholder article description will go here"
+      articleUrl={`/article/placeholder-1`}
+      image="/blog-hero.png"
     />
   );
 }
@@ -14,6 +30,15 @@ async function BlogHeroDemo() {
 export const blogHero = {
   name: "blog-hero",
   components: {
-    Default: <BlogHeroDemo />,
+    Default: <ConnectedBlogHeroDemo />,
+  },
+  getComponents: (searchParams: {
+    [key: string]: string | string[] | undefined;
+  }) => {
+    const isConnected = searchParams.connected !== undefined;
+
+    return {
+      Default: isConnected ? <ConnectedBlogHeroDemo /> : <StaticBlogHeroDemo />,
+    };
   },
 };
