@@ -1,9 +1,19 @@
 import { NextRequest, NextResponse } from "next/server";
 
 // Function for fetching the schema from the CMS (types and fields)
-async function fetchSchema() {
-  // Replace with an API call to the CMS to retrieve the full content schema
-  return {};
+async function fetchSchema(request: NextRequest) {
+  try {
+    const baseUrl = new URL(request.url).origin;
+    const response = await fetch(`${baseUrl}/.well-known/schema`);
+    if (!response.ok) {
+      throw new Error("Failed to fetch schema");
+    }
+    const schema = await response.json();
+    return schema;
+  } catch (error) {
+    console.error("Error fetching schema:", error);
+    return {};
+  }
 }
 
 export async function GET(request: NextRequest) {
@@ -17,7 +27,7 @@ export async function GET(request: NextRequest) {
 
   try {
     // Fetch content types using the abstracted function
-    const contentTypes = await fetchSchema();
+    const contentTypes = await fetchSchema(request);
 
     // Include content types in the registry item
     const registryItem = {

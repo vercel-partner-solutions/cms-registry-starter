@@ -17,7 +17,7 @@ export function BlogHero({
       <section className="relative w-full h-[560px] text-white">
         <Link href={articleUrl}>
           <Image
-            src={image || "/placeholder.svg"}
+            src={image}
             alt={title}
             fill
             className="object-cover"

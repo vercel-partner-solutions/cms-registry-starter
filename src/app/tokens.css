@@ -8,7 +8,7 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.15 0.02 25);
 
-  --primary: oklch(0.45 0.15 250);
+  --primary: oklch(0.9 0.2 30);
   --primary-foreground: oklch(1 0 0);
 
   --secondary: oklch(0.97 0.005 220);
@@ -35,7 +35,7 @@
 
   --sidebar: oklch(1 0 0);
   --sidebar-foreground: oklch(0.15 0.02 25);
-  --sidebar-primary: oklch(0.45 0.15 250);
+  --sidebar-primary: oklch(0.9 0.2 30);
   --sidebar-primary-foreground: oklch(1 0 0);
   --sidebar-accent: oklch(0.96 0.03 250);
   --sidebar-accent-foreground: oklch(0.35 0.02 250);
@@ -46,15 +46,20 @@
 
   --shadow-2xs: 0 1px 3px 0px hsl(220 100% 50% / 0.05);
   --shadow-xs: 0 1px 3px 0px hsl(220 100% 50% / 0.05);
-  --shadow-sm: 0 1px 3px 0px hsl(220 100% 50% / 0.1),
+  --shadow-sm:
+    0 1px 3px 0px hsl(220 100% 50% / 0.1),
     0 1px 2px -1px hsl(220 100% 50% / 0.1);
-  --shadow: 0 1px 3px 0px hsl(220 100% 50% / 0.1),
+  --shadow:
+    0 1px 3px 0px hsl(220 100% 50% / 0.1),
     0 1px 2px -1px hsl(220 100% 50% / 0.1);
-  --shadow-md: 0 1px 3px 0px hsl(220 100% 50% / 0.1),
+  --shadow-md:
+    0 1px 3px 0px hsl(220 100% 50% / 0.1),
     0 2px 4px -1px hsl(220 100% 50% / 0.1);
-  --shadow-lg: 0 1px 3px 0px hsl(220 100% 50% / 0.1),
+  --shadow-lg:
+    0 1px 3px 0px hsl(220 100% 50% / 0.1),
     0 4px 6px -1px hsl(220 100% 50% / 0.1);
-  --shadow-xl: 0 1px 3px 0px hsl(220 100% 50% / 0.1),
+  --shadow-xl:
+    0 1px 3px 0px hsl(220 100% 50% / 0.1),
     0 8px 10px -1px hsl(220 100% 50% / 0.1);
   --shadow-2xl: 0 1px 3px 0px hsl(220 100% 50% / 0.25);
 }
@@ -69,8 +74,8 @@
   --popover: oklch(0.18 0.01 220);
   --popover-foreground: oklch(0.95 0.005 220);
 
-  --primary: oklch(0.55 0.18 250);
-  --primary-foreground: oklch(0.12 0.01 220);
+  --primary: oklch(0.9 0.2 30);
+  --primary-foreground: oklch(0.12 0.01 30);
 
   --secondary: oklch(0.28 0.02 220);
   --secondary-foreground: oklch(0.75 0.03 220);
@@ -96,8 +101,8 @@
 
   --sidebar: oklch(0.12 0.01 220);
   --sidebar-foreground: oklch(0.95 0.005 220);
-  --sidebar-primary: oklch(0.55 0.18 250);
-  --sidebar-primary-foreground: oklch(0.12 0.01 220);
+  --sidebar-primary: oklch(0.9 0.2 30);
+  --sidebar-primary-foreground: oklch(0.12 0.01 30);
   --sidebar-accent: oklch(0.25 0.08 250);
   --sidebar-accent-foreground: oklch(0.75 0.03 220);
   --sidebar-border: oklch(0.38 0.02 220);
@@ -105,15 +110,20 @@
 
   --shadow-2xs: 0 1px 3px 0px hsl(220 100% 50% / 0.1);
   --shadow-xs: 0 1px 3px 0px hsl(220 100% 50% / 0.1);
-  --shadow-sm: 0 1px 3px 0px hsl(220 100% 50% / 0.15),
+  --shadow-sm:
+    0 1px 3px 0px hsl(220 100% 50% / 0.15),
     0 1px 2px -1px hsl(220 100% 50% / 0.15);
-  --shadow: 0 1px 3px 0px hsl(220 100% 50% / 0.15),
+  --shadow:
+    0 1px 3px 0px hsl(220 100% 50% / 0.15),
     0 1px 2px -1px hsl(220 100% 50% / 0.15);
-  --shadow-md: 0 1px 3px 0px hsl(220 100% 50% / 0.15),
+  --shadow-md:
+    0 1px 3px 0px hsl(220 100% 50% / 0.15),
     0 2px 4px -1px hsl(220 100% 50% / 0.15);
-  --shadow-lg: 0 1px 3px 0px hsl(220 100% 50% / 0.15),
+  --shadow-lg:
+    0 1px 3px 0px hsl(220 100% 50% / 0.15),
     0 4px 6px -1px hsl(220 100% 50% / 0.15);
-  --shadow-xl: 0 1px 3px 0px hsl(220 100% 50% / 0.15),
+  --shadow-xl:
+    0 1px 3px 0px hsl(220 100% 50% / 0.15),
     0 8px 10px -1px hsl(220 100% 50% / 0.15);
   --shadow-2xl: 0 1px 3px 0px hsl(220 100% 50% / 0.3);
 }

@@ -2,14 +2,16 @@ import { BlogHero } from "@/components/blog-hero";
 import { getBlogArticle } from "@/lib/cms";
 
 async function ConnectedBlogHeroDemo() {
-  const blog = await getBlogArticle("getting-started-nextjs-15");
+  const blog = await getBlogArticle(
+    "wpp-and-vercel-bringing-ai-to-the-creative-process"
+  );
 
   if (!blog) return null;
 
   return (
     <BlogHero
       title={blog.title}
-      description={blog.details}
+      description={blog.summary}
       articleUrl={`/article/${blog.slug}`}
       image={blog.image?.url}
     />
