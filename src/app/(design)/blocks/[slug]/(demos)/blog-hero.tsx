@@ -9,7 +9,7 @@ async function ConnectedBlogHeroDemo() {
   return (
     <BlogHero
       title={blog.title}
-      description={blog.details}
+      description={blog.summary}
       articleUrl={`/article/${blog.slug}`}
       image={blog.image?.url}
     />
