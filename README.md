@@ -1,4 +1,4 @@
-<a href="https://cms-registry-starter.vercel.app/">
+<a href="https://sanity-registry-starter.vercel.app/">
   <h1 align="center">CMS Registry Starter</h1>
 </a>
 
@@ -29,11 +29,9 @@ Discover how this starter kit integrates with various CMS platforms by exploring
 ### Key Integration Steps
 
 1. **Update the `.well-known/r/cms` Route Handler**:
-
    - Modify the route handler to fetch schema information directly from the CMS. This ensures that your application can dynamically adapt to changes in the CMS schema.
 
 2. **Configure Base Queries in `src/lib/cms/index.ts`**:
-
    - Implement base queries to retrieve content from the CMS. This setup is crucial for ensuring that your application can efficiently access and display CMS-managed content.
 
 3. **Customize `prompt.md` for CMS Specifics**:
@@ -104,8 +102,10 @@ like:
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  src: url("https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm45xW5rygbi49c.woff2")
-      format("woff2"), url("https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm45xW5rygbj49c.woff")
+  src:
+    url("https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm45xW5rygbi49c.woff2")
+      format("woff2"),
+    url("https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm45xW5rygbj49c.woff")
       format("woff");
 }
 
@@ -113,8 +113,10 @@ like:
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  src: url("https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3gnD-w.woff2")
-      format("woff2"), url("https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3g3D_w.woff")
+  src:
+    url("https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3gnD-w.woff2")
+      format("woff2"),
+    url("https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3g3D_w.woff")
       format("woff");
 }
 ```

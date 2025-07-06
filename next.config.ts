@@ -11,6 +11,12 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.externals = [...config.externals, "framer-motion"];
+    }
+    return config;
+  },
   async headers() {
     return [
       {
