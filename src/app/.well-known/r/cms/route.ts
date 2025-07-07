@@ -1,9 +1,21 @@
 import { NextRequest, NextResponse } from "next/server";
 
-// Function for fetching the schema from the CMS (types and fields)
+// Function for fetching the schema from Contentstack (types and fields)
 async function fetchSchema() {
-  // Replace with an API call to the CMS to retrieve the full content schema
-  return {};
+  const response = await fetch("https://api.contentstack.io/v3/content_types", {
+    method: "GET",
+    headers: {
+      api_key: process.env.CONTENTSTACK_API_KEY!,
+      authorization: process.env.CONTENTSTACK_MANAGEMENT_TOKEN!,
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error("Error retrieving schema");
+  }
+
+  const schema = await response.json();
+  return schema;
 }
 
 export async function GET(request: NextRequest) {
