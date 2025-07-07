@@ -2,7 +2,7 @@ import { BlogHero } from "@/components/blog-hero";
 import { getBlogArticle } from "@/lib/cms";
 
 async function ConnectedBlogHeroDemo() {
-  const blog = await getBlogArticle("getting-started-nextjs-15");
+  const blog = await getBlogArticle("vercel-ship-2025-recap");
 
   if (!blog) return null;
 
