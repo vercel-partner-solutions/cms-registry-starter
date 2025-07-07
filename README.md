@@ -25,6 +25,7 @@ The CMS Registry Starter is designed to facilitate the integration of a Content 
 Discover how this starter kit integrates with various CMS platforms by exploring the following branches:
 
 - [Contentful](https://github.com/vercel-partner-solutions/cms-registry-starter/tree/contentful) ([Demo](https://contentful-registry-starter.vercel.app/))
+- [Contentstack](https://github.com/vercel-partner-solutions/cms-registry-starter/tree/contentstack) ([Demo](https://contentstack-registry-starter.vercel.app/))
 - [Sanity](https://github.com/vercel-partner-solutions/cms-registry-starter/tree/sanity) ([Demo](https://sanity-registry-starter.vercel.app/))
 
 ### Key Integration Steps
