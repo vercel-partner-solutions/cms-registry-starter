@@ -1,6 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "CMS Registry Starter",
+  "name": "Contentstack Registry Starter",
   "homepage": "https://contentstack-registry-starter.vercel.app",
   "items": [
     {
