@@ -1,6 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "CMS Registry Starter",
+  "name": "Sanity Registry Starter",
   "homepage": "https://sanity-registry-starter.vercel.app",
   "items": [
     {
