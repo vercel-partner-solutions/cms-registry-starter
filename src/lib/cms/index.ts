@@ -32,28 +32,7 @@ interface CMSArticle {
   title: string;
   slug: string;
   summary: string;
-  details: {
-    json: any;
-    links: {
-      assets: {
-        block: Array<{
-          sys: { id: string };
-          url: string;
-          title: string;
-          description?: string;
-          width: number;
-          height: number;
-          contentType: string;
-        }>;
-      };
-      entries: {
-        block: Array<{
-          sys: { id: string };
-          __typename: string;
-        }>;
-      };
-    };
-  };
+  details: string;
   image: {
     sys: { id: string };
     url: string;
@@ -78,32 +57,7 @@ const GET_ARTICLES_QUERY = `
         title
         slug
         summary
-        details {
-          json
-          links {
-            assets {
-              block {
-                sys {
-                  id
-                }
-                url
-                title
-                description
-                width
-                height
-                contentType
-              }
-            }
-            entries {
-              block {
-                sys {
-                  id
-                }
-                __typename
-              }
-            }
-          }
-        }
+        details
         image {
           sys {
             id
@@ -132,32 +86,7 @@ const GET_ARTICLE_BY_SLUG_QUERY = `
         title
         slug
         summary
-        details {
-          json
-          links {
-            assets {
-              block {
-                sys {
-                  id
-                }
-                url
-                title
-                description
-                width
-                height
-                contentType
-              }
-            }
-            entries {
-              block {
-                sys {
-                  id
-                }
-                __typename
-              }
-            }
-          }
-        }
+        details
         image {
           sys {
             id
@@ -227,16 +156,14 @@ async function contentQuery<T = any>(
  * @returns {BlogArticle} - The transformed BlogArticle object.
  */
 function reshapeToArticle(item: CMSArticle): BlogArticle {
-  // Convert rich text JSON to a simple string for the details field
-  // In a real implementation, you might want to use @contentful/rich-text-plain-text-renderer
-  const detailsText = JSON.stringify(item.details.json);
+  // In a real implementation, for rich text JSON you want to use @contentful/rich-text-plain-text-renderer
 
   return {
     id: item.sys.id,
     title: item.title,
     slug: item.slug,
     summary: item.summary,
-    details: detailsText,
+    details: item.details,
     image: item.image
       ? {
           url: item.image.url,
