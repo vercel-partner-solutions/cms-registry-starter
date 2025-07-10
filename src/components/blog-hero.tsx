@@ -37,8 +37,11 @@ export function BlogHero({
                 {description}
               </p>
             </Link>
-            <Link href={articleUrl} className="hover:underline">
-              Read -&gt;
+            <Link
+              href={articleUrl}
+              className="text-white underline font-semibold transition-colors duration-300 hover:text-gray-300"
+            >
+              Read More
             </Link>
           </div>
         </div>
@@ -55,14 +58,19 @@ export function BlogHero({
             <h1 className="font-bold text-4xl tracking-tight sm:text-5xl md:text-6xl mb-6 text-foreground">
               {title}
             </h1>
-          </Link>
-          <Link href={articleUrl}>
             <p className="text-xl mb-8 leading-relaxed text-muted-foreground">
               {description}
             </p>
           </Link>
-          <Link href={articleUrl} className="hover:underline">
-            Read -&gt;
+          <Link
+            href={articleUrl}
+            className="text-white underline font-semibold transition-colors duration-300 hover:text-gray-300"
+            style={{
+              textDecorationThickness: "2px",
+              textUnderlineOffset: "4px",
+            }}
+          >
+            Read More
           </Link>
         </div>
       </div>
